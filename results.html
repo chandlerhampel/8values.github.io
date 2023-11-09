@@ -91,10 +91,10 @@ stats"></a></div></noscript>
         }
     }
 
-    econArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
-    diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
-    govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
-    sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    sexyArray = ["Pure Androphilia","Strong Androphilic Lean","Androphilic Tendencies","Bisexual / Undifferentiated","Gynephilic Tendencies","Strong Gynephilic Lean","Pure Gynephilia"]
+    genxArray = ["Hyperfeminine","Stereotypically Feminine","Feminine Tendencies","Androgynous","Masculine Tendencies","Stereotypically Masculine","Hypermasculine"]
+    relsArray = ["Asexual","Demisexual","Hyposexual","Typically Sexual","Atypically Sexual","Exceptionally Sexual","Hypersexual"]
+    sctyArray = ["Comprehensive Dysphoria","Severe Dysphoria","Marked Dysphoria","Moderate Dysphoria","Affective Dysphoria","Mild Dysphoria","No Dysphoria"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -108,35 +108,35 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
-    wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    androphilic  = getQueryVariable("e")
+    feminine     = getQueryVariable("d")
+    asexual   = getQueryVariable("g")
+    dysphoric  = getQueryVariable("s")
+    gynephilic    = (100 - androphilic).toFixed(1)
+    masculine     = (100 - feminine   ).toFixed(1)
+    hypersexual = (100 - asexual ).toFixed(1)
+    not dysphoric = (100 - dysphoric).toFixed(1)
 
-    setBarValue("equality", equality)
-    setBarValue("wealth", wealth)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
-    setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("androphilic", androphilic)
+    setBarValue("gynephilic", gynephilic)
+    setBarValue("feminine", feminine)
+    setBarValue("masculine", masculine)
+    setBarValue("asexual", asexual)
+    setBarValue("hypersexual", hypersexual)
+    setBarValue("dysphoric", dysphoric)
+    setBarValue("not dysphoric", not dysphoric)
 
-    document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
-    document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
+    document.getElementById("sexuality-label").innerHTML = setLabel(androphilic, sexyArray)
+    document.getElementById("genderi-label").innerHTML = setLabel(feminine, genxArray)
+    document.getElementById("reltsex-label").innerHTML = setLabel(asexual, relsArray)
+    document.getElementById("gendysphoria-label").innerHTML = setLabel(dysphoric, gdysArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.sexy - equality), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats. - liberty), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
         dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
         if (dist < ideodist) {
@@ -208,24 +208,24 @@ stats"></a></div></noscript>
         ctx.fillText(ideology, 20, 140)
 
         ctx.textAlign="left"
-        if (equality  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
-        if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
-        if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
+        if (androphilic  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
+        if (feminine     > 30) {ctx.fillText(might + "%", 130, 357.5)}
+        if (asexual   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
+        if (dysphoric > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
         ctx.textAlign="right"
-        if (wealth    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
-        if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
-        if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+        if (gynephilic    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
+        if (masculine     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
+        if (hypersexual > 30) {ctx.fillText(authority + "%", 670, 477.5)}
+        if (not dysphoric  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
         ctx.fillText("8values.github.io", 780, 60)
 		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
-        ctx.fillText("Economic Axis: " + document.getElementById("economic-label").innerHTML, 400, 175)
-        ctx.fillText("Diplomatic Axis: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
-        ctx.fillText("Civil Axis: " + document.getElementById("state-label").innerHTML, 400, 415)
-        ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
+        ctx.fillText("Sexuality Axis: " + document.getElementById("sexuality-label").innerHTML, 400, 175)
+        ctx.fillText("Gender Expression Axis: " + document.getElementById("genderi-label").innerHTML, 400, 295)
+        ctx.fillText("Relationship to Sex Axis: " + document.getElementById("reltsex-label").innerHTML, 400, 415)
+        ctx.fillText("Gender Dysphoria Axis: " + document.getElementById("gendysphoria-label").innerHTML, 400, 535)
 
         document.getElementById("banner").src = c.toDataURL();
     }
