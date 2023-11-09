@@ -48,19 +48,19 @@ stats"></a></div></noscript>
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
-    let govt_array = new Array(questions.length);
-    let scty_array = new Array(questions.length);
+    var max_sexy, max_genx, max_rels, max_gdys; // Max possible scores
+    max_sexy = max_genx = max_rels = max_gdys = 0;
+    let sexy_array = new Array(questions.length);
+    let genx_array = new Array(questions.length);
+    let rels_array = new Array(questions.length);
+    let gdys_array = new Array(questions.length);
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_sexy += Math.abs(questions[i].effect.sexy)
+        max_genx += Math.abs(questions[i].effect.genx)
+        max_rels += Math.abs(questions[i].effect.rels)
+        max_gdys += Math.abs(questions[i].effect.gdys)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -76,10 +76,10 @@ stats"></a></div></noscript>
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
-        govt_array[qn] = mult*questions[qn].effect.govt
-        scty_array[qn] = mult*questions[qn].effect.scty
+        sexy_array[qn] = mult*questions[qn].effect.sexy
+        genx_array[qn] = mult*questions[qn].effect.genx
+        rels_array[qn] = mult*questions[qn].effect.rels
+        gdys_array[qn] = mult*questions[qn].effect.gdys
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -101,15 +101,15 @@ stats"></a></div></noscript>
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_scty = scty_array.reduce((a, b) => a + b, 0)
+        let final_sexy = sexy_array.reduce((a, b) => a + b, 0)
+        let final_genx = genx_array.reduce((a, b) => a + b, 0)
+        let final_rels = rels_array.reduce((a, b) => a + b, 0)
+        let final_gdys = gdys_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
-            + `&g=${calc_score(final_govt,max_govt)}`
-            + `&s=${calc_score(final_scty,max_scty)}`
+            + `?e=${calc_score(final_sexy,max_sexy)}`
+            + `&d=${calc_score(final_genx,max_genx)}`
+            + `&g=${calc_score(final_rels,max_rels)}`
+            + `&s=${calc_score(final_gdys,max_gdys)}`
     }
 </script>
 </body>
