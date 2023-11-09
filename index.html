@@ -37,93 +37,87 @@
 <button class="button" onclick="location.href='instructions.html';" style="font-size:36pt;">Click here to start!</button>
 <br><hr>
 <h2>What is 8values?</h2>
-    <p>8values is, in essence, a political quiz that attempts to assign percentages for eight different political values. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
+    <p>This is an edit of the original 8value political quiz modified to gives scores on aspects related to sexuality and gender identity / expression. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
     There are <b><u><span id="numOfQuestions"></span></u></b> questions in the test.</p>
 
 <h2><a id="anchor">What are the eight values?</a></h2>
-    <p>There are four independent axes - Economic, Diplomatic, Civil, and Society - and each has two opposing values assigned to them. They are:</p>
+    <p>There are four independent axes - Sexuality, Gender Expression, Relationship to Sex, and Gender Dysphoria - and each has two opposing values assigned to them. They are:</p>
     <div class="explanation_bg">
         <div class="spacer">
             <div class="explanation_blurb_left">
-                <p class="value"><b style="color:#d32f2f;">EQUALITY</b></p>
+                <p class="value"><b style="color:#d32f2f;">ANDROPHILIA</b></p>
                 <p class="blurb-text">
-                    Those with higher Equality scores believe the economy should distribute value evenly among the populace. They tend to support progressive tax codes, social programs, and at high values, socialism.
+                    Those with higher Androphilia scores are more attracted to men and masculinity.
                 </p>
             </div>
             <div class="explanation_axis">
-                <p class="axis_name">ECONOMIC</p>
+                <p class="axis_name">SEXUALITY</p>
                 <img class="arrow" src="double_arrow.svg"></img>
             </div>
             <div class="explanation_blurb_right">
-                <p class="value"><b style="color:#00796b;">MARKETS</b></p>
+                <p class="value"><b style="color:#00796b;">GYNEPHILIA</b></p>
                 <p class="blurb-text">
-                    Those with higher Market scores believe the economy should be focused on rapid growth. They tend to support lower taxes, privatization, deregulation, and at high values, laissez-faire capitalism.
+                    Those with higher Gynephilia scores are more attracted to women and feminity.
                 </p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
-                <p class="value"><b style="color:#f57c00;">NATION</b></p>
+                <p class="value"><b style="color:#f57c00;">FEMININE</b></p>
                 <p class="blurb-text">
-                    Those with higher Nation scores are patriotic and nationalist. They often believe in an aggressive foreign policy, valuing the military, strength, sovereignty, and at high values, territorial expansion.
+                    Without making a value judgement on behaviour, this indicates one has a high level of stereotypically feminine gender expression. Why steretypically? Because this only indicates expression, not identity.
                 </p>
             </div>
             <div class="explanation_axis">
-                <p class="axis_name">DIPLOMATIC</p>
+                <p class="axis_name">GENDER EXPRESSION</p>
                 <img class="arrow" src="double_arrow.svg"></img>
             </div>
             <div class="explanation_blurb_right">
-                <p class="value"><b style="color:#0288d1;">GLOBE</b></p>
+                <p class="value"><b style="color:#0288d1;">MASCULINE</b></p>
                 <p class="blurb-text">
-                    Those with higher Globe scores are cosmopolitan and globalist. They often believe in a peaceful foreign policy, emphasizing diplomacy, cooperation, integration, and at high values, a world government.
+                    Conversely, this indicates a high level of stereotypically masculine gender expression.
                 </p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
-                <p class="value"><b style="color:#fbc02d;">LIBERTY</b></p>
+                <p class="value"><b style="color:#fbc02d;">ASEXUAL</b></p>
                 <p class="blurb-text">
-                    Those with higher Liberty scores believe in strong civil liberties. They tend to support democracy and oppose state intervention in personal lives. Note that this refers to civil liberties, not economic liberties.
+                    A higher asexuality score correlates to finding less importance in sex and perhaps even being digusted by it.
                 </p>
             </div>
             <div class="explanation_axis">
-                <p class="axis_name">CIVIL</p>
+                <p class="axis_name">RELATIONSHIP TO SEX</p>
                 <img class="arrow" src="double_arrow.svg"></img>
             </div>
             <div class="explanation_blurb_right">
-                <p class="value"><b style="color:#303f9f;">AUTHORITY</b></p>
+                <p class="value"><b style="color:#303f9f;">HYPERSEXUAL</b></p>
                 <p class="blurb-text">
-                    Those with higher Authority scores believe in strong state power. They tend to support state intervention in personal lives, government surveillance, and at high values, censorship or autocracy.
+                    A higher hypersexuality score implies that one is very focused on sexual activity in their everyday life. Perhaps — but not necessarily — to an unhealthy degree.
                 </p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
-                <p class="value"><b style="color:#689f38;">TRADITION</b></p>
+                <p class="value"><b style="color:#689f38;">DYSPHORIC</b></p>
                 <p class="blurb-text">
-                    Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.
+                    Higher levels of gender dysphoria correlate to a general rejection of one's birth sex. This is NOT a diagnostic tool, so DO NOT take any therapeutic or medical action based on this result without prior consultation with a licensed therapist.
                 </p>
             </div>
             <div class="explanation_axis">
-                <p class="axis_name">SOCIETY</p>
+                <p class="axis_name">GENDER DYSPHORIA</p>
                 <img class="arrow" src="double_arrow.svg"></img>
             </div>
             <div class="explanation_blurb_right">
-                <p class="value"><b style="color:#7b1fa2;">PROGRESS</b></p>
+                <p class="value"><b style="color:#7b1fa2;">NO DYSPHORIA</b></p>
                 <p class="blurb-text">
-                    Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.
+                    A score on this end indicates little to no rejection of one's birth sex, but not necessarily a tacit acceptance of it either. Just that one's birth sex does not cause great distress.
                 </p>
             </div>
         </div>
         <br/>
     </div>
 
-<h2 style="margin-top: 17pt;">What's the "Closest Match" mean at the bottom of the results?</h2>
-    <p>In addition to matching you to the eight values, the quiz also attempts to match you to a political ideology. This is a work in progress and is much less accurate than the values and axes, so don't take it too seriously. If you disagree with your assigned ideology, send us an email at eightvalues@gmail.com with your scores, matched ideology, and preferred ideology, and we'll look into adjusting the system. Thanks!</p>
-<h2>I don't like my scores!</h2>
-    <p>¯\_(ツ)_/¯<br/>
-    If you have any suggestions or constructive criticism, feel free to send it to <a href="mailto:eightvalues@gmail.com">eightvalues@gmail.com</a> or open an issue on the GitHub page here: <a href="https://github.com/8values/8values.github.io">GitHub Page</a></p>
-<br>
 <!-- Website visit statistics - no personal information is collected! -->
 <script type="text/javascript">
 var sc_project=11325211;
