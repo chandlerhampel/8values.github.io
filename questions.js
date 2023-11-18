@@ -628,5 +628,105 @@ questions = [
             "rels": -10,
             "gdys": -10
         }
+    },
+    {
+        {
+        "question": "Abortion should be prohibited in most or all cases.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": -10,
+            "gdys": -10
+        }
+    },
+    {
+        "question": "Gun ownership should be prohibited for those without a valid reason.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": -10,
+            "gdys": 0
+        }
+    },
+    {
+        "question": "I support single-payer, universal healthcare.",
+        "effect": {
+            "sexy": 10,
+            "genx": 0,
+            "rels": 0,
+            "gdys": 0
+        }
+    },
+    {
+        "question": "Prostitution should be illegal.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": -10,
+            "gdys": -10
+        }
+    },
+    {
+        "question": "Maintaining family values is essential.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": 0,
+            "gdys": -10
+        }
+    },
+    {
+        "question": "To chase progress at all costs is dangerous.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": 0,
+            "gdys": -10
+        }
+    },
+    {
+        "question": "Genetic modification is a force for good, even on humans.",
+        "effect": {
+            "sexy": 0,
+            "genx": 0,
+            "rels": 0,
+            "gdys": 10
+        }
+    },
+    {
+        "question": "We should open our borders to immigration.",
+        "effect": {
+            "sexy": 0,
+            "genx": 10,
+            "rels": 10,
+            "gdys": 0
+        }
+    },
+    {
+        "question": "Governments should be as concerned about foreigners as they are about their own citizens.",
+        "effect": {
+            "sexy": 0,
+            "genx": 10,
+            "rels": 0,
+            "gdys": 0
+        }
+    },
+    {
+        "question": "All people - regardless of factors like culture or sexuality - should be treated equally.",
+        "effect": {
+            "sexy": 10,
+            "genx": 10,
+            "rels": 10,
+            "gdys": 10
+        }
+    },
+    {
+        "question": "It is important that we further my group's goals above all others.",
+        "effect": {
+            "sexy": -10,
+            "genx": -10,
+            "rels": -10,
+            "gdys": -10
+        }
     }
 ];
